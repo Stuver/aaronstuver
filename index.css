@@ -1,11 +1,6 @@
 @import url("/fonts/fonts.css");
 
-* {
-  box-sizing: border-box;
-  line-height: 1;
-  margin: 0px;
-}
-
+// COMPONENTS
 .hero {
   font-family: 'Garden Grove Heavy', sans-serif;
   font-weight: 900;
@@ -58,17 +53,107 @@ p, li {
   padding-bottom: 50px;
 }
 
-.twitter-follow-button {
-  display: flex;
-  margin: auto;
-  margin-bottom: 16px;
+
+
+// FONTS 
+ 
+* {
+  box-sizing: border-box;
+  line-height: 1;
+  margin: 0px;
+  font-size: 62.5%; 
+} 
+ 
+p {
+  font-family: 'Oswald', sans-serif;
+  font-weight: normal;
+  font-size: 17px; font-size: 1.7rem;
 }
 
-.timeline-wrapper {
-  display: flex;
-  margin: auto;
-  width: 75vw;
+.jumbo, .headline, .title, .subtitle, h1, h2, .caption {
+  font-family: 'Garden Grove', 'Roboto', sans-serif;
 }
+
+.jumbo {
+  font-weight: 900;
+  font-family: 'Garden Grove Heavy', 'Roboto', sans-serif;
+  font-size: 112px; font-size: 11.2rem;
+  line-height: 120%;
+}
+ 
+.headline {
+  font-weight: bold;
+  font-family: 'Garden Grove Bold', 'Roboto', sans-serif;
+  font-size: 56px; font-size: 5.6rem;  
+  line-height: 120%;
+}
+ 
+.title {
+  font-weight: 300;
+  font-family: 'Garden Grove Light', 'Roboto', sans-serif;
+  font-size: 36px; 3.6rem;
+  line-height: 120%;
+}
+ 
+.subtitle {
+  font-weight: 300;
+  font-family: 'Garden Grove Light', 'Roboto', sans-serif;
+  font-size: 24px; font-size: 2.4rem;
+  line-height: 120%;
+}
+ 
+.heading1 {
+  font-family: 'Garden Grove Bold', 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 20px; font-size: 2.0rem;
+  line-height: 120%;
+}
+ 
+.heading2 {
+  font-weight: 400;
+  font-family: 'Garden Grove Semibold', 'Roboto', sans-serif;
+  font-size: 20px; font-size: 2.0rem;
+  line-height: 120%;
+}
+ 
+.quote {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
+  font-size: 24px; font-size 2.4rem;
+  line-height: 120%;
+}
+
+.body-serif {
+  font-family: 'Times', serif;
+  font-size: 17;
+  line-height: 120%;
+}
+ 
+.caption {
+  font-weight: 300;
+  font-family: 'Garden Grove Light', 'Roboto', sans-serif;
+  font-size: 12px; font-size: 1.2rem;
+  text-transform: uppercase;
+  line-height: 120%;
+}
+ 
+ 
+// COLORS
+ 
+.red { color: #EF3340; }
+.red-bg { background-color: #EF3340; }
+.pink { color: #f3435e; }
+.pink-bg { background-color: #f3435e; }
+.yellow { color: #e3e935; }
+.yellow-bg { background-color: #e3e935; }
+.green1 { color: #00a82d; }
+.green1-bg { background-color: #00a82d; }
+.green2 { color: #83dd65; }
+.green2-bg { background-color: #83dd65; }
+.navy { color: #1f2a44; }
+.navy-bg { background-color: #1f2a44; }
+.blue { color: #9bcbeb; }
+.blue-bg { background-color: #9bcbeb; }
 
 @media screen and (max-width: 1024px) {
   .logo {
