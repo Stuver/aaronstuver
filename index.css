@@ -1,3 +1,5 @@
+@import url("fonts/fonts.css");
+
 * {
   box-sizing: border-box;
   line-height: 1;
@@ -5,7 +7,7 @@
 }
 
 .hero {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Garden Grove Heavy', sans-serif;
   font-weight: 900;
   background-color: #EDF2F4;
   padding: 48px;
@@ -24,7 +26,7 @@
 }
 
 .menu > a {
-  font-weight: 400;
+  font-family: 'Garden Grove Light', sans-serif;
   font-size: calc(100vh * .109 * .3);
 }
 
