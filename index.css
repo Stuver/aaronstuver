@@ -15,7 +15,7 @@
 }
 
 .title {
-  padding-top: calc(50vh - 112px*3);
+  padding-top: 40vh;
   font-size: calc(100vh * .109);
   text-align: center;
   color: #1F2A44;
