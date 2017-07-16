@@ -45,7 +45,7 @@ h1 {
   padding-bottom: calc(75vh * .109 * .75);
 }
 
-p, li {
+li {
   font-family: 'Oswald';
   list-style: none;
   text-align: left;
