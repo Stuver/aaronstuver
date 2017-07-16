@@ -28,7 +28,7 @@
 .subtitle {
   font-family: 'Garden Grove Light';
   text-align: left;
-  font-size: calc(100vh * .07);
+  font-size: calc(100vh * .05);
   padding-bottom: 50px;
 }
 
