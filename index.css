@@ -25,6 +25,12 @@
   padding-right: 12px;
 }
 
+.subtitle {
+  font-family: 'Garden Grove Light';
+  text-align: left;
+  font-size: 24px;
+  padding-bottom: 50px;
+
 .menu > a {
   font-family: 'Garden Grove Light', sans-serif;
   font-size: calc(100vh * .109 * .3);
@@ -46,7 +52,6 @@ h1 {
 p, li {
   font-family: 'Oswald';
   list-style: none;
-  font-weight: 100;
   text-align: left;
   font-size: calc(100vh * .04);
   padding-bottom: 50px;
