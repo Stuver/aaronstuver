@@ -70,10 +70,15 @@ p {
   text-transform: uppercase;
   line-height: 120%;
 }
- 
+
+li {
+  list-style: none;
+}
  
 // COLORS
  
+.default { color: #EDF2F4; }
+.default-bg { background-color: #EDF2F4; }
 .red { color: #EF3340; }
 .red-bg { background-color: #EF3340; }
 .pink { color: #f3435e; }
@@ -88,3 +93,31 @@ p {
 .navy-bg { background-color: #1f2a44; }
 .blue { color: #9bcbeb; }
 .blue-bg { background-color: #9bcbeb; }
+
+// COMPONENTS
+.full-viewport { 
+  height: auto;
+  min-height: 100vh;
+  position: relative;
+}
+
+.menu { 
+  display: flex;
+  justify-content: space-around;
+}
+
+.floating-action-button {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  right: 24px;
+  bottom: 24px;
+}
+
+// SPECIFIC CASES
+.full-viewport > .centered {
+  text-align: center;
+  padding-top: 50vh;
+  padding-left: 12px;
+  padding-right: 12px;
+}
