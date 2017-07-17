@@ -11,21 +11,22 @@
 p {
   font-family: 'Oswald', sans-serif;
   font-weight: normal;
-  font-size: 17px; font-size: 1.7rem; 
+  font-size: 17px; font-size: 1.7rem; font-size: calc(100vh * .04);
 }
 
 .jumbo {
   font-family: 'Garden Grove Heavy', sans-serif;
   font-weight: 900;
-  font-size: 112px; font-size: 11.2rem;
+  font-size: 112px; font-size: 11.2rem; font-size: calc(100vh * .109);
   line-height: 120%;
 }
  
 .headline {
   font-family: 'Garden Grove Bold', sans-serif;
   font-weight: bold;
-  font-size: 56px; font-size: 5.6rem;  
+  font-size: 56px; font-size: 5.6rem; font-size: calc(75vh * .109);
   line-height: 120%;
+  padding-bottom: calc(75vh * .109 * .75);
 }
  
 .title {
@@ -38,8 +39,9 @@ p {
 .subtitle {
   font-family: 'Garden Grove Light', sans-serif;
   font-weight: 300;
-  font-size: 24px; font-size: 2.4rem;
+  font-size: 24px; font-size: 2.4rem; font-size: calc(100vh * .05);
   line-height: 120%;
+  padding-bottom: 50px;
 }
  
 .heading1 {
@@ -72,7 +74,7 @@ p {
 .caption {
   font-family: 'Garden Grove Light', sans-serif;
   font-weight: 300;
-  font-size: 12px; font-size: 1.2rem;
+  font-size: 12px; font-size: 1.2rem; font-size: calc(100vh * .109 * .3);
   text-transform: uppercase;
   line-height: 120%;
 }
@@ -81,7 +83,7 @@ li {
   list-style: none;
   font-family: 'Oswald', sans-serif;
   font-weight: normal;
-  font-size: 17px; font-size: 1.7rem;
+  font-size: 17px; font-size: 1.7rem; font-size: calc(100vh * .04);
 }
  
 /* COLORS */
