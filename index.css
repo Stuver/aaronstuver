@@ -7,8 +7,6 @@
 }
 
 .hero {
-  font-family: 'Garden Grove Heavy', sans-serif;
-  font-weight: 900;
   background-color: #EDF2F4;
   padding: 48px;
   height: auto;
@@ -17,6 +15,8 @@
 }
 
 .title {
+  font-family: 'Garden Grove Heavy', sans-serif;
+  font-weight: 900;
   padding-top: 20vh;
   font-size: calc(100vh * .109);
   text-align: center;
