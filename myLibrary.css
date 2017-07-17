@@ -8,48 +8,44 @@ p {
   font-size: 17px; font-size: 1.7rem;
 }
 
-.jumbo, .headline, .title, .subtitle, h1, h2, .caption {
-  font-family: 'SW Garden Grove', 'Roboto', sans-serif;
-}
-
 .jumbo {
+  font-family: 'Garden Grove Heavy', sans-serif;
   font-weight: 900;
-  font-family: 'SW Garden Grove Heavy', 'Roboto', sans-serif;
   font-size: 112px; font-size: 11.2rem;
   line-height: 120%;
 }
  
 .headline {
+  font-family: 'Garden Grove Bold', sans-serif;
   font-weight: bold;
-  font-family: 'SW Garden Grove Bold', 'Roboto', sans-serif;
   font-size: 56px; font-size: 5.6rem;  
   line-height: 120%;
 }
  
 .title {
+  font-family: 'Garden Grove Light', sans-serif;
   font-weight: 300;
-  font-family: 'SW Garden Grove Light', 'Roboto', sans-serif;
   font-size: 36px; 3.6rem;
   line-height: 120%;
 }
  
 .subtitle {
+  font-family: 'Garden Grove Light', sans-serif;
   font-weight: 300;
-  font-family: 'SW Garden Grove Light', 'Roboto', sans-serif;
   font-size: 24px; font-size: 2.4rem;
   line-height: 120%;
 }
  
 .heading1 {
-  font-family: 'SW Garden Grove Bold', 'Roboto', sans-serif;
+  font-family: 'Garden Grove Bold', sans-serif;
   font-weight: 400;
   font-size: 20px; font-size: 2.0rem;
   line-height: 120%;
 }
  
 .heading2 {
+  font-family: 'Garden Grove Semibold', sans-serif;
   font-weight: 400;
-  font-family: 'SW Garden Grove Semibold', 'Roboto', sans-serif;
   font-size: 20px; font-size: 2.0rem;
   line-height: 120%;
 }
@@ -68,8 +64,8 @@ p {
 }
  
 .caption {
+  font-family: 'Garden Grove Light', sans-serif;
   font-weight: 300;
-  font-family: 'SW Garden Grove Light', 'Roboto', sans-serif;
   font-size: 12px; font-size: 1.2rem;
   text-transform: uppercase;
   line-height: 120%;
