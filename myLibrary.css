@@ -101,6 +101,12 @@ li {
   position: relative;
 }
 
+.twitter-follow-button {
+  display: flex;
+  margin: auto;
+  margin-bottom: 16px;
+}
+
 .menu { 
   display: flex;
   justify-content: space-around;
