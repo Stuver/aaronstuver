@@ -112,7 +112,7 @@ li {
   min-height: 100vh;
   position: relative;
   background-position: top left; 
-  background-size: contain; 
+  background-size: cover; 
   background-repeat: no-repeat;
 }
 
