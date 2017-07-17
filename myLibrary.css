@@ -127,7 +127,7 @@ li {
 }
 
 // SPECIFIC CASES
-.full-viewport > .centered {
+.centered {
   text-align: center;
   padding-top: 50vh;
   padding-left: 12px;
