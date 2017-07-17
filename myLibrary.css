@@ -1,3 +1,9 @@
+* {
+  box-sizing: border-box;
+  line-height: 1;
+  margin: 0px;
+}
+
 // FONTS 
  
 html { font-size: 62.5%; } 
@@ -95,7 +101,8 @@ li {
 .blue-bg { background-color: #9bcbeb; }
 
 // COMPONENTS
-.full-viewport { 
+.full-viewport {
+  padding: 48px;
   height: auto;
   min-height: 100vh;
   position: relative;
