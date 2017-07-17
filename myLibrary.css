@@ -111,6 +111,9 @@ li {
   height: auto;
   min-height: 100vh;
   position: relative;
+  background-position: top center; 
+  background-size: contain; 
+  background-repeat: no-repeat;
 }
 
 .twitter-follow-button {
@@ -137,4 +140,10 @@ li {
   padding-top: 20vh;
   padding-left: 12px;
   padding-right: 12px;
+}
+
+@media screen and (max-width: 1024px) {
+  .full-viewport {
+    background-size: cover;
+  }
 }
