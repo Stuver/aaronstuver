@@ -9,3 +9,13 @@
   font-family: "Garden Grove Light";
   src: url(GardenGrove-Light.otf);
 }
+
+@font-face {
+  font-family: "Garden Grove Bold";
+  src: url(GardenGrove-Bold.otf);
+}
+
+@font-face {
+  font-family: "Garden Grove Semibold";
+  src: url(GardenGrove-Semibold.otf);
+}
