@@ -145,5 +145,6 @@ li {
 @media screen and (max-width: 1024px) {
   .full-viewport {
     background-size: cover;
+    background-position: top center; 
   }
 }
