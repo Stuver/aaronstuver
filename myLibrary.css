@@ -111,7 +111,7 @@ li {
 .twitter-follow-button {
   display: flex;
   margin: auto;
-  margin-bottom: 16px;
+  padding-bottom: 16px;
 }
 
 .menu { 
