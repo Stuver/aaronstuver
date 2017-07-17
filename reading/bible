@@ -9,6 +9,8 @@
       <h1 class="jumbo navy" style="padding-top: calc(50vh - 100vh * .109);">Reading</h1>
       <a href="../../"><image class="logo" src="../../Group.png" alt="Aaron Cochran Logo - navy"></a>
     </div>
-    <div class="full-viewport blue-bg" style="background-image: url('IMG_0410.JPG'); background-position: center center; background size: 30vh 40vh;">
+    <div class="full-viewport blue-bg" style="background-image: url('Group.png'); background-position: center center; background size: 30vh 40vh;">
       <h1 class="headline">The Bible</h1>
-      </div>
+    </div>
+  </body>
+</html>
