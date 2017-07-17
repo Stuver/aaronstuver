@@ -4,7 +4,7 @@
   margin: 0px;
 }
 
-// FONTS 
+/* FONTS */
  
 html { font-size: 62.5%; } 
  
@@ -31,7 +31,7 @@ p {
 .title {
   font-family: 'Garden Grove Light', sans-serif;
   font-weight: 300;
-  font-size: 36px; 3.6rem;
+  font-size: 36px; font-size: 3.6rem;
   line-height: 120%;
 }
  
@@ -59,7 +59,7 @@ p {
 .quote {
   font-family: 'Oswald', sans-serif;
   font-weight: 300;
-  font-size: 24px; font-size 2.4rem;
+  font-size: 24px; font-size: 2.4rem;
   line-height: 120%;
 }
 
@@ -81,7 +81,7 @@ li {
   list-style: none;
 }
  
-// COLORS
+/* COLORS */
  
 .default { color: #EDF2F4; }
 .default-bg { background-color: #EDF2F4; }
@@ -100,7 +100,7 @@ li {
 .blue { color: #9bcbeb; }
 .blue-bg { background-color: #9bcbeb; }
 
-// COMPONENTS
+/* COMPONENTS */
 .full-viewport {
   padding: 48px;
   height: auto;
@@ -126,7 +126,7 @@ li {
   bottom: 24px;
 }
 
-// SPECIFIC CASES
+/* SPECIFIC CASES */
 .centered {
   text-align: center;
   padding-top: 50vh;
