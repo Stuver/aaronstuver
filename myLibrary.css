@@ -106,6 +106,15 @@ li {
 .blue-bg { background-color: #9bcbeb; }
 
 /* COMPONENTS */
+.menu > .button {
+    border: none;
+    border-radius: 4px;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
 .full-viewport {
   padding: 24px 24px 24px 24px;
   height: auto;
