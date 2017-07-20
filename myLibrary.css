@@ -113,6 +113,8 @@ li {
     text-align: center;
     text-decoration: none;
     display: inline-block;
+    font-family: 'Garden Grove Light', sans-serif;
+    font-size: calc(100vh * .109 * .3);
 }
 
 .full-viewport {
