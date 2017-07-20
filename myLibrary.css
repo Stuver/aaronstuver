@@ -109,11 +109,10 @@ li {
 .menu > .button {
     border: none;
     border-radius: 4px;
-    padding: 10px 20px;
+    padding: 15px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    margin-bottom: 8px;
 }
 
 .full-viewport {
@@ -129,6 +128,7 @@ li {
 .twitter-follow-button {
   display: flex;
   margin: auto;
+  margin-top: 8px;
 }
 
 .menu { 
