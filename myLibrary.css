@@ -126,12 +126,7 @@ li {
   justify-content: space-around;
 }
 
-.menu > a {
-  font-family: 'Garden Grove Light', sans-serif;
-  font-size: calc(100vh * .109 * .3);
-}
-
-.menu > .button {
+.menu > .button, a {
     border: none;
     border-radius: 4px;
     padding: 15px 32px;
