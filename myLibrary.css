@@ -126,7 +126,7 @@ li {
   justify-content: space-around;
 }
 
-.menu > .button, a {
+.menu > .button {
     border: none;
     border-radius: 4px;
     padding: 8px 4px;
