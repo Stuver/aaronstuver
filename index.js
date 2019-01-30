@@ -1,497 +1,807 @@
- window.onload = function() {
+window.onload = function() {
 
 
-var assignments;
-assignments = {
-
-   "assignment1": {
-      "action": "Homework 2",
-      "project": "LING 2367.01",
-      "assigned date": "21-Feb",
-      "dd": "2/28/18",
-      "et": null,
-      "completed": true
-   },
-   "assignment2": {
-      "action": "Quiz: Consumer Culture",
-      "project": "DS 2750",
-      "assigned date": "27-Feb",
-      "dd": "3/1/18",
-      "et": null,
-      "completed": true
-   },
-   "assignment3": {
-      "action": "Homework 4",
-      "project": "ISE 3700",
-      "assigned date": "22-Feb",
-      "dd": "3/1/18",
-      "et": null,
-      "completed": true
-   },
-   "assignment4": {
-      "action": "Assignment 2",
-      "project": "DS 2330",
-      "assigned date": "16-Feb",
-      "dd": "3/2/18",
-      "et": null,
-      "completed": true
-   },
-   "assignment5": {
-      "action": "Timeline Comparison",
-      "project": "DS 2750",
-      "assigned date": "27-Feb",
-      "dd": "3/6/18",
-      "et": 1.5,
-      "completed": true
-   },
-   "assignment6": {
-      "action": "Read Dekker 3",
-      "project": "ISE 3700",
-      "assigned date": "1-Mar",
-      "dd": "3/8/18",
-      "et": 0.5,
-      "completed": true
-   },
-   "assignment7": {
-      "action": "Homework 5",
-      "project": "ISE 3700",
-      "assigned date": "1-Mar",
-      "dd": "3/8/18",
-      "et": 1,
-      "completed": true
-   },
-   "assignment8": {
-      "action": "Assignment 2",
-      "project": "DS 2130",
-      "assigned date": "13-Feb",
-      "dd": "3/8/18",
-      "et": 3,
-      "completed": true
-   },
-   "assignment9": {
-      "action": "Annotated Bibliography",
-      "project": "LING 2367.01",
-      "assigned date": "1-Mar",
-      "dd": "3/8/18",
-      "et": 3,
-      "completed": true
-   },
-   "assignment10": {
-      "action": "Exercise 7",
-      "project": "DS 2330",
-      "assigned date": "7-Mar",
-      "dd": "3/9/18",
-      "et": 1,
-      "completed": true
-   },
-   "assignment11": {
-      "action": "Gift Exercise",
-      "project": "DS 2130",
-      "assigned date": "8-Mar",
-      "dd": "3/20/18",
-      "et": 0.5,
-      "completed": true
-   },
-   "assignment12": {
-      "action": "Read Dekker 4",
-      "project": "ISE 3700",
-      "assigned date": "13-Mar",
-      "dd": "3/20/18",
-      "et": 0.5,
-      "completed": true
-   },
-   "assignment13": {
-      "action": "Homework 6",
-      "project": "ISE 3700",
-      "assigned date": "13-Mar",
-      "dd": "3/20/18",
-      "et": 1,
-      "completed": true
-   },
-   "assignment14": {
-      "action": "Zimman 2013",
-      "project": "LING 2367.01",
-      "assigned date": "13-Mar",
-      "dd": "3/20/18",
-      "et": 1,
-      "completed": true
-   },
-   "assignment15": {
-      "action": "Exercise 8",
-      "project": "DS 2330",
-      "assigned date": "9-Mar",
-      "dd": "3/21/18",
-      "et": 1,
-      "completed": true
-   },
-   "assignment16": {
-      "action": "Quiz: Bauhaus",
-      "project": "DS 2750",
-      "assigned date": "20-Mar",
-      "dd": "3/22/18",
-      "et": 0.25,
-      "completed": true
-   },
-   "assignment17": {
-      "action": "Read Handout CH24",
-      "project": "ISE 3700",
-      "assigned date": "15-Mar",
-      "dd": "3/22/18",
-      "et": 0.5,
-      "completed": false
-   },
-   "assignment18": {
-      "action": "Levon 2013",
-      "project": "LING 2367.01",
-      "assigned date": "15-Mar",
-      "dd": "3/22/18",
-      "et": 1,
-      "completed": true
-   },
-   "assignment19": {
-      "action": "Exercise 9",
-      "project": "DS 2330",
-      "assigned date": "21-Mar",
-      "dd": "3/23/18",
-      "et": 0.25,
-      "completed": true
-   },
-   "assignment20": {
-      "action": "Read JCS Book 1, 2, 12",
-      "project": "ISE 3700",
-      "assigned date": "20-Mar",
-      "dd": "3/27/18",
-      "et": 0.5,
-      "completed": false
-   },
-   "assignment21": {
-      "action": "Miller and James 2009",
-      "project": "LING 2367.01",
-      "assigned date": "20-Mar",
-      "dd": "3/27/18",
-      "et": 1,
-      "completed": true
-   },
-   "assignment22": {
-      "action": "Homework 3",
-      "project": "LING 2367.01",
-      "assigned date": "21-Mar",
-      "dd": "3/28/18",
-      "et": 1,
-      "completed": true
-   },
-   "assignment23": {
-      "action": "Read JCS Book 3, 4",
-      "project": "ISE 3700",
-      "assigned date": "22-Mar",
-      "dd": "3/29/18",
-      "et": 0.5,
-      "completed": false
-   },
-   "assignment24": {
-      "action": "Homework 7",
-      "project": "ISE 3700",
-      "assigned date": "22-Mar",
-      "dd": "4/5/18",
-      "et": 1,
-      "completed": true
-   },
-   "assignment26": {
-      "action": "Stout and Dasgupta",
-      "project": "LING 2367.01",
-      "assigned date": "22-Mar",
-      "dd": "3/29/18",
-      "et": 1,
-      "completed": true
-   },
-   "assignment27": {
-      "action": "Read Klein et al",
-      "project": "ISE 3700",
-      "assigned date": "27-Mar",
-      "dd": "4/3/18",
-      "et": 0.5,
-      "completed": false
-   },
-   "assignment28": {
-      "action": "Research Paper Draft 1",
-      "project": "LING 2367.01",
-      "assigned date": "27-Mar",
-      "dd": "4/5/18",
-      "et": 3,
-      "completed": true
-   },
+var assignments = {
    "assignment29": {
-      "action": "Read JCS 7, 8",
-      "project": "ISE 3700",
-      "assigned date": "29-Mar",
-      "dd": "4/5/18",
-      "et": 0.5,
-      "completed": false
-   },
-   "assignment31": {
-      "action": "Bjorkman 2017",
-      "project": "LING 2367.01",
-      "assigned date": "29-Mar",
-      "dd": "4/3/18",
-      "et": 1,
-      "completed": true
-   },
-   "assignment32": {
-      "action": "Assignment 3",
-      "project": "DS 2330",
-      "assigned date": "23-Mar",
-      "dd": "4/6/18",
-      "et": 5,
-      "completed": true
-   },
-   "assignment33": {
-      "action": "Rose 2015",
-      "project": "LING 2367.01",
-      "assigned date": "3-Apr",
-      "dd": "4/10/18",
-      "et": 1,
-      "completed": true
-   },
-   "assignment34": {
-      "action": "Assignment 3",
-      "project": "DS 2130",
-      "assigned date": "6-Mar",
-      "dd": "4/12/18",
-      "et": 10,
-      "completed": false
-   },
-   "assignment47": {
-   	"action": "Research Presentation",
-   	"project": "LING 2367.01",
-   	"assigned date": "29-Mar",
-   	"dd": "4/12/18",
-   	"et": 3,
-   	"completed": false
-   },
-   "assignment35": {
-      "action": "Bonus Contributions",
-      "project": "DS 2750",
-      "assigned date": "5-Apr",
-      "dd": "4/12/18",
-      "et": 0.5,
-      "completed": true
-   },
-   "assignment36": {
-      "action": "Read JCS 5, 6",
-      "project": "ISE 3700",
-      "assigned date": "5-Apr",
-      "dd": "4/12/18",
-      "et": 0.5,
-      "completed": false
-   },
-   "assignment37": {
-      "action": "Research Paper Draft 2",
-      "project": "LING 2367.01",
-      "assigned date": "5-Apr",
-      "dd": "4/12/18",
-      "et": 3,
-      "completed": false
-   },
-   "assignment25": {
-      "action": "Homework 8",
-      "project": "ISE 3700",
-      "assigned date": "22-Mar",
-      "dd": "4/19/18",
-      "et": 1,
-      "completed": false
-   },
-   "assignment38": {
-      "action": "Read JCS 11",
-      "project": "ISE 3700",
-      "assigned date": "12-Apr",
-      "dd": "4/19/18",
-      "et": 0.5,
+      "action": "Project 1 Crit",
+      "project": "Jenny",
+      "assigned date": "8-Jan",
+      "dd": "2/7/19",
+      "et": "",
       "completed": false
    },
    "assignment39": {
-      "action": "Homework 10",
-      "project": "ISE 3700",
-      "assigned date": "12-Apr",
-      "dd": "4/19/18",
-      "et": 1,
+      "action": "Personal Essay: The Death and Life of Great American Cities",
+      "project": "Sebastien",
+      "assigned date": "8-Jan",
+      "dd": "4/18/19",
+      "et": "",
       "completed": false
    },
    "assignment40": {
-      "action": "Homework 4",
-      "project": "LING 2367.01",
-      "assigned date": "12-Apr",
-      "dd": "4/19/18",
-      "et": 1,
+      "action": "R2",
+      "project": "Alex and Vita",
+      "assigned date": "14-Jan",
+      "dd": "1/28/19",
+      "et": "",
       "completed": false
    },
    "assignment41": {
-      "action": "Portfolio",
-      "project": "Professional",
-      "assigned date": "16-Apr",
-      "dd": "4/23/18",
-      "et": 10,
+      "action": "SP2",
+      "project": "Alex and Vita",
+      "assigned date": "14-Jan",
+      "dd": "1/28/19",
+      "et": "",
       "completed": false
    },
    "assignment42": {
-      "action": "Assignment 4",
-      "project": "DS 2330",
-      "assigned date": "13-Apr",
-      "dd": "4/23/18",
-      "et": 5,
+      "action": "Tilt Brush",
+      "project": "Alex and Vita",
+      "assigned date": "14-Jan",
+      "dd": "2/4/19",
+      "et": "",
+      "completed": false
+   },
+   "assignment53": {
+      "action": "A2: Syllabus Review",
+      "project": "Dr. Campbell",
+      "assigned date": "14-Jan",
+      "dd": "1/20/19",
+      "et": "",
+      "completed": true
+   },
+   "assignment67": {
+      "action": "Quiz 2: Unit 2",
+      "project": "Dr. Campbell",
+      "assigned date": "14-Jan",
+      "dd": "1/20/19",
+      "et": "",
+      "completed": true
+   },
+   "assignment78": {
+      "action": "Read Unit 2: Eating, Digestion",
+      "project": "Dr. Campbell",
+      "assigned date": "14-Jan",
+      "dd": "1/20/19",
+      "et": "",
+      "completed": true
+   },
+   "assignment97": {
+      "action": "Progress 1",
+      "project": "John",
+      "assigned date": "14-Jan",
+      "dd": "1/20/19",
+      "et": "",
+      "completed": true
+   },
+   "assignment1": {
+      "action": "Reading: Aretino's Attack on Michelangelo",
+      "project": "Julie Dentzer",
+      "assigned date": "15-Jan",
+      "dd": "1/17/19",
+      "et": "",
+      "completed": false
+   },
+   "assignment21": {
+      "action": "Develop concepts using C-K Theory",
+      "project": "Jenny",
+      "assigned date": "15-Jan",
+      "dd": "1/17/19",
+      "et": "",
+      "completed": true
+   },
+   "assignment2": {
+      "action": "Reading: Luther's Position on Images",
+      "project": "Julie Dentzer",
+      "assigned date": "17-Jan",
+      "dd": "1/24/19",
+      "et": "",
+      "completed": true
+   },
+   "assignment3": {
+      "action": "Reading: Council of Trent on Religious Art",
+      "project": "Julie Dentzer",
+      "assigned date": "17-Jan",
+      "dd": "1/24/19",
+      "et": "",
+      "completed": false
+   },
+   "assignment22": {
+      "action": "Preliminary C-K map review",
+      "project": "Jenny",
+      "assigned date": "17-Jan",
+      "dd": "1/22/19",
+      "et": "",
+      "completed": true
+   },
+   "assignment54": {
+      "action": "A3: Diet Analysis Project Introdution Review",
+      "project": "Dr. Campbell",
+      "assigned date": "21-Jan",
+      "dd": "1/27/19",
+      "et": "",
+      "completed": false
+   },
+   "assignment68": {
+      "action": "Quiz 3: Project Intro",
+      "project": "Dr. Campbell",
+      "assigned date": "21-Jan",
+      "dd": "1/27/19",
+      "et": "",
+      "completed": true
+   },
+   "assignment79": {
+      "action": "Read Unit 3: Macronutrients",
+      "project": "Dr. Campbell",
+      "assigned date": "21-Jan",
+      "dd": "1/27/19",
+      "et": "",
+      "completed": false
+   },
+   "assignment98": {
+      "action": "Progress 2",
+      "project": "John",
+      "assigned date": "21-Jan",
+      "dd": "1/27/19",
+      "et": "",
+      "completed": false
+   },
+   "assignment23": {
+      "action": "Develop concepts using C-K Theory",
+      "project": "Jenny",
+      "assigned date": "22-Jan",
+      "dd": "1/24/19",
+      "et": "",
+      "completed": true
+   },
+   "assignment24": {
+      "action": "Reading: Cristensen, Disruptive Innovation",
+      "project": "Sebastien",
+      "assigned date": "22-Jan",
+      "dd": "1/24/19",
+      "et": "",
+      "completed": true
+   },
+   "assignment19": {
+      "action": "Carmen: Tweeting About Iconoclasm",
+      "project": "Julie Dentzer",
+      "assigned date": "24-Jan",
+      "dd": "1/24/19",
+      "et": "",
+      "completed": false
+   },
+   "assignment25": {
+      "action": "Conjecture development",
+      "project": "Jenny",
+      "assigned date": "24-Jan",
+      "dd": "1/29/19",
+      "et": "",
       "completed": false
    },
    "assignment43": {
-      "action": "Final Project",
-      "project": "ISE 3700",
-      "assigned date": "16-Apr",
-      "dd": "4/23/18",
-      "et": 5,
+      "action": "R3",
+      "project": "Alex and Vita",
+      "assigned date": "28-Jan",
+      "dd": "2/4/19",
+      "et": "",
       "completed": false
    },
-   "assignment30": {
-      "action": "Homework 9",
-      "project": "ISE 3700",
-      "assigned date": "29-Mar",
-      "dd": "4/25/18",
-      "et": 1,
+   "assignment57": {
+      "action": "Exam 1: Units 2-3",
+      "project": "Dr. Campbell",
+      "assigned date": "28-Jan",
+      "dd": "2/3/19",
+      "et": "",
+      "completed": false
+   },
+   "assignment69": {
+      "action": "Quiz 4",
+      "project": "Dr. Campbell",
+      "assigned date": "28-Jan",
+      "dd": "2/3/19",
+      "et": "",
+      "completed": false
+   },
+   "assignment80": {
+      "action": "Read Unit 4: Micronutrients",
+      "project": "Dr. Campbell",
+      "assigned date": "28-Jan",
+      "dd": "2/3/19",
+      "et": "",
+      "completed": false
+   },
+   "assignment89": {
+      "action": "Powertool Model",
+      "project": "John",
+      "assigned date": "28-Jan",
+      "dd": "2/3/19",
+      "et": "",
+      "completed": false
+   },
+   "assignment26": {
+      "action": "Conjecture development",
+      "project": "Jenny",
+      "assigned date": "29-Jan",
+      "dd": "1/31/19",
+      "et": "",
+      "completed": false
+   },
+   "assignment27": {
+      "action": "Reading: Hacklin, Incremental Innovation Becomes Disruptive",
+      "project": "Sebastien",
+      "assigned date": "29-Jan",
+      "dd": "1/31/19",
+      "et": "",
+      "completed": false
+   },
+   "assignment90": {
+      "action": "Assembly/Explode",
+      "project": "John",
+      "assigned date": "30-Jan",
+      "dd": "2/17/19",
+      "et": "",
+      "completed": false
+   },
+   "assignment28": {
+      "action": "Presentation Preparation",
+      "project": "Jenny",
+      "assigned date": "31-Jan",
+      "dd": "2/5/19",
+      "et": "",
+      "completed": false
+   },
+   "assignment88": {
+      "action": "Materials Project",
+      "project": "Nate and Mark",
+      "assigned date": "1-Feb",
+      "dd": "2/1/19",
+      "et": "",
       "completed": false
    },
    "assignment44": {
-      "action": "Resarch Paper Final",
-      "project": "LING 2367.01",
-      "assigned date": "19-Apr",
-      "dd": "4/26/18",
-      "et": 3,
+      "action": "R4",
+      "project": "Alex and Vita",
+      "assigned date": "4-Feb",
+      "dd": "2/11/19",
+      "et": "",
       "completed": false
    },
    "assignment45": {
-      "action": "Point of View Essay",
-      "project": "DS 2750",
-      "assigned date": "23-Apr",
-      "dd": "4/30/18",
-      "et": 2,
+      "action": "SP3",
+      "project": "Alex and Vita",
+      "assigned date": "4-Feb",
+      "dd": "2/11/19",
+      "et": "",
+      "completed": false
+   },
+   "assignment63": {
+      "action": "Diet Analysis Project: Food Photo Journal",
+      "project": "Dr. Campbell",
+      "assigned date": "4-Feb",
+      "dd": "2/10/19",
+      "et": "",
+      "completed": false
+   },
+   "assignment70": {
+      "action": "Quiz 5",
+      "project": "Dr. Campbell",
+      "assigned date": "4-Feb",
+      "dd": "2/10/19",
+      "et": "",
+      "completed": false
+   },
+   "assignment81": {
+      "action": "Read Unit 5: Labels, Fortification",
+      "project": "Dr. Campbell",
+      "assigned date": "4-Feb",
+      "dd": "2/10/19",
+      "et": "",
+      "completed": false
+   },
+   "assignment99": {
+      "action": "Progress 3",
+      "project": "John",
+      "assigned date": "4-Feb",
+      "dd": "2/10/19",
+      "et": "",
+      "completed": false
+   },
+   "assignment18": {
+      "action": "Carmen: Vermeer & Velazquez",
+      "project": "Julie Dentzer",
+      "assigned date": "5-Feb",
+      "dd": "2/5/19",
+      "et": "",
+      "completed": false
+   },
+   "assignment30": {
+      "action": "Video: Gill, Making cities more playful ",
+      "project": "Sebastien",
+      "assigned date": "7-Feb",
+      "dd": "2/12/19",
+      "et": "",
       "completed": false
    },
    "assignment46": {
-    "action": "Glossary Review",
-    "project": "ISE 3700",
-    "assigned date": "25-Mar",
-    "dd": "3/29/18",
-    "et": 2,
-    "completed": true
-  },
-  "assignment47": {
-    "action": "Practical Guide Ch. 1",
-    "project": "DS RES",
-    "assigned date": "23-Aug",
-    "dd": "8/28/18",
-    "et": .5,
-    "completed": false
-  },
-  "assignment48": {
-    "action": "Res for Des Pre - Ch.2",
-    "project": "DS RES",
-    "assigned date": "23-Aug",
-    "dd": "8/28/18",
-    "et": .5,
-    "completed": false
-  },
-  "assignment49": {
-    "action": "Universal Methods 53, 74",
-    "project": "DS RES",
-    "assigned date": "23-Aug",
-    "dd": "8/28/18",
-    "et": .5,
-    "completed": false
-  },
-  "assignment50": {
-    "action": "Practical Guide Ch. 2",
-    "project": "DS RES",
-    "assigned date": "28-Aug",
-    "dd": "8/30/18",
-    "et": .5,
-    "completed": false
-  },
-  "assignment51": {
-    "action": "Res for Des Ch. 2",
-    "project": "DS RES",
-    "assigned date": "28-Aug",
-    "dd": "8/30/18",
-    "et": .5,
-    "completed": false
-  },
-  "assignment52": {
-    "action": "Secondary Research: Problem Space",
-    "project": "DS RES",
-    "assigned date": "23-Aug",
-    "dd": "8/28/18",
-    "et": .5,
-    "completed": false
-  },
-  "assignment53": {
-    "action": "Participant Ciriteria & Research Qs",
-    "project": "DS RES",
-    "assigned date": "28-Aug",
-    "dd": "8/30/18",
-    "et": .5,
-    "completed": false
-  },
-  "assignment54": {
-    "action": "400 Ellipses",
-    "project": "DS 3301",
-    "assigned date": "23-Aug",
-    "dd": "8/28/18",
-    "et": 3,
-    "completed": false
-  },
-  "assignment55": {
-    "action": "Printers",
-    "project": "DS 3301",
-    "assigned date": "23-Aug",
-    "dd": "8/28/18",
-    "et": .5,
-    "completed": true
-  },
-  "assignment56": {
-    "action": "Mouse Box",
-    "project": "DS CAD",
-    "assigned date": "23-Aug",
-    "dd": "8/28/18",
-    "et": 2,
-    "completed": false
-  },
-  "assignment57": {
-    "action": "Arch Tour",
-    "project": "Art Hist",
-    "assigned date": "23-Aug",
-    "dd": "9/12/18",
-    "et": 1,
-    "completed": false
-  },
-  "assignment58": {
-    "action": "Paper: Define ID",
-    "project": "DS 3101",
-    "assigned date": "23-Aug",
-    "dd": "9/4/18",
-    "et": 3,
-    "completed": false
-  },
-  "assignment59": {
-    "action": "Macroscope 1",
-    "project": "Dig Hist",
-    "assigned date": "24-Aug",
-    "dd": "8/29/18",
-    "et": .5,
-    "completed": false
-  },
-  "assignment60": {
-    "action": "Macroscope 2",
-    "project": "Dig Hist",
-    "assigned date": "29-Aug",
-    "dd": "8/31/18",
-    "et": .5,
-    "completed": false
-  }
+      "action": "R5",
+      "project": "Alex and Vita",
+      "assigned date": "11-Feb",
+      "dd": "2/18/19",
+      "et": "",
+      "completed": false
+   },
+   "assignment47": {
+      "action": "SP4",
+      "project": "Alex and Vita",
+      "assigned date": "11-Feb",
+      "dd": "2/18/19",
+      "et": "",
+      "completed": false
+   },
+   "assignment58": {
+      "action": "Exam 2: Units 4-5",
+      "project": "Dr. Campbell",
+      "assigned date": "11-Feb",
+      "dd": "2/17/19",
+      "et": "",
+      "completed": false
+   },
+   "assignment71": {
+      "action": "Quiz 6",
+      "project": "Dr. Campbell",
+      "assigned date": "11-Feb",
+      "dd": "2/17/19",
+      "et": "",
+      "completed": false
+   },
+   "assignment82": {
+      "action": "Read Unit 6: Weight, Disorders",
+      "project": "Dr. Campbell",
+      "assigned date": "11-Feb",
+      "dd": "2/17/19",
+      "et": "",
+      "completed": false
+   },
+   "assignment31": {
+      "action": "Reading: Lynch, The Image of the City",
+      "project": "Sebastien",
+      "assigned date": "12-Feb",
+      "dd": "2/14/19",
+      "et": "",
+      "completed": false
+   },
+   "assignment33": {
+      "action": "Case Study Review",
+      "project": "Lauren",
+      "assigned date": "12-Feb",
+      "dd": "2/26/19",
+      "et": "",
+      "completed": false
+   },
+   "assignment91": {
+      "action": "Powertool Improvement Build Plan",
+      "project": "John",
+      "assigned date": "13-Feb",
+      "dd": "2/24/19",
+      "et": "",
+      "completed": false
+   },
+   "assignment4": {
+      "action": "Midterm",
+      "project": "Julie Dentzer",
+      "assigned date": "14-Feb",
+      "dd": "2/21/19",
+      "et": "",
+      "completed": false
+   },
+   "assignment17": {
+      "action": "Carmen: Gender & Society",
+      "project": "Julie Dentzer",
+      "assigned date": "14-Feb",
+      "dd": "2/14/19",
+      "et": "",
+      "completed": false
+   },
+   "assignment32": {
+      "action": "Reading: Donoff, The Playful City",
+      "project": "Sebastien",
+      "assigned date": "14-Feb",
+      "dd": "2/19/19",
+      "et": "",
+      "completed": false
+   },
+   "assignment48": {
+      "action": "Final Project Proposal",
+      "project": "Alex and Vita",
+      "assigned date": "18-Feb",
+      "dd": "2/25/19",
+      "et": "",
+      "completed": false
+   },
+   "assignment64": {
+      "action": "Diet Analysis Project: consumption Log and Analysis",
+      "project": "Dr. Campbell",
+      "assigned date": "18-Feb",
+      "dd": "2/24/19",
+      "et": "",
+      "completed": false
+   },
+   "assignment65": {
+      "action": "Diet Analysis Project: Interpretation",
+      "project": "Dr. Campbell",
+      "assigned date": "18-Feb",
+      "dd": "2/24/19",
+      "et": "",
+      "completed": false
+   },
+   "assignment92": {
+      "action": "Powertool Improvement CAD",
+      "project": "John",
+      "assigned date": "20-Feb",
+      "dd": "3/7/19",
+      "et": "",
+      "completed": false
+   },
+   "assignment5": {
+      "action": "Reading: Baudelaire, from The Painter of Modern Life",
+      "project": "Julie Dentzer",
+      "assigned date": "21-Feb",
+      "dd": "2/26/19",
+      "et": "",
+      "completed": false
+   },
+   "assignment49": {
+      "action": "VR Group Project, Part 1: Proposal",
+      "project": "Alex and Vita",
+      "assigned date": "25-Feb",
+      "dd": "3/4/19",
+      "et": "",
+      "completed": false
+   },
+   "assignment72": {
+      "action": "Quiz 7",
+      "project": "Dr. Campbell",
+      "assigned date": "25-Feb",
+      "dd": "3/3/19",
+      "et": "",
+      "completed": false
+   },
+   "assignment83": {
+      "action": "Read Unit 7: Micro, Food Safety",
+      "project": "Dr. Campbell",
+      "assigned date": "25-Feb",
+      "dd": "3/3/19",
+      "et": "",
+      "completed": false
+   },
+   "assignment100": {
+      "action": "Progress 4",
+      "project": "John",
+      "assigned date": "25-Feb",
+      "dd": "3/3/19",
+      "et": "",
+      "completed": false
+   },
+   "assignment34": {
+      "action": "Place characterization rewiew",
+      "project": "Lauren",
+      "assigned date": "26-Feb",
+      "dd": "2/28/19",
+      "et": "",
+      "completed": false
+   },
+   "assignment36": {
+      "action": "Reading: Heim Blind Spots",
+      "project": "Sebastien",
+      "assigned date": "28-Feb",
+      "dd": "3/5/19",
+      "et": "",
+      "completed": false
+   },
+   "assignment50": {
+      "action": "Assess Production Needs",
+      "project": "Alex and Vita",
+      "assigned date": "4-Mar",
+      "dd": "3/18/19",
+      "et": "",
+      "completed": false
+   },
+   "assignment59": {
+      "action": "Exam 3: Units 6-7",
+      "project": "Dr. Campbell",
+      "assigned date": "4-Mar",
+      "dd": "3/10/19",
+      "et": "",
+      "completed": false
+   },
+   "assignment73": {
+      "action": "Quiz 8",
+      "project": "Dr. Campbell",
+      "assigned date": "4-Mar",
+      "dd": "3/10/19",
+      "et": "",
+      "completed": false
+   },
+   "assignment84": {
+      "action": "Read Unit 8: Food Industry",
+      "project": "Dr. Campbell",
+      "assigned date": "4-Mar",
+      "dd": "3/10/19",
+      "et": "",
+      "completed": false
+   },
+   "assignment35": {
+      "action": "Preliminary Concepts (3 options for 3 sites)",
+      "project": "Lauren",
+      "assigned date": "5-Mar",
+      "dd": "3/19/19",
+      "et": "",
+      "completed": false
+   },
+   "assignment93": {
+      "action": "Powertool Improvement Revised CAD",
+      "project": "John",
+      "assigned date": "6-Mar",
+      "dd": "3/24/19",
+      "et": "",
+      "completed": false
+   },
+   "assignment20": {
+      "action": "Carmen: Monet Photography",
+      "project": "Julie Dentzer",
+      "assigned date": "12-Mar",
+      "dd": "3/12/19",
+      "et": "",
+      "completed": false
+   },
+   "assignment51": {
+      "action": "Motion Capture Prep",
+      "project": "Alex and Vita",
+      "assigned date": "18-Mar",
+      "dd": "3/25/19",
+      "et": "",
+      "completed": false
+   },
+   "assignment66": {
+      "action": "Super Market Survey",
+      "project": "Dr. Campbell",
+      "assigned date": "18-Mar",
+      "dd": "3/24/19",
+      "et": "",
+      "completed": false
+   },
+   "assignment74": {
+      "action": "Quiz 9",
+      "project": "Dr. Campbell",
+      "assigned date": "18-Mar",
+      "dd": "3/24/19",
+      "et": "",
+      "completed": false
+   },
+   "assignment85": {
+      "action": "Read Unit 9: Food Tech",
+      "project": "Dr. Campbell",
+      "assigned date": "18-Mar",
+      "dd": "3/24/19",
+      "et": "",
+      "completed": false
+   },
+   "assignment6": {
+      "action": "Reading: Greenberg, Modernist Painting",
+      "project": "Julie Dentzer",
+      "assigned date": "19-Mar",
+      "dd": "3/21/19",
+      "et": "",
+      "completed": false
+   },
+   "assignment94": {
+      "action": "Powertool Improvement 3D Print",
+      "project": "John",
+      "assigned date": "20-Mar",
+      "dd": "3/31/19",
+      "et": "",
+      "completed": false
+   },
+   "assignment7": {
+      "action": "Reading: Duchamp, The Richard Mutt Case",
+      "project": "Julie Dentzer",
+      "assigned date": "21-Mar",
+      "dd": "3/26/19",
+      "et": "",
+      "completed": false
+   },
+   "assignment37": {
+      "action": "Concept Review 1",
+      "project": "Lauren",
+      "assigned date": "21-Mar",
+      "dd": "3/28/19",
+      "et": "",
+      "completed": false
+   },
+   "assignment75": {
+      "action": "Quiz 10",
+      "project": "Dr. Campbell",
+      "assigned date": "25-Mar",
+      "dd": "3/31/19",
+      "et": "",
+      "completed": false
+   },
+   "assignment86": {
+      "action": "Read Unit 10: Biotech",
+      "project": "Dr. Campbell",
+      "assigned date": "25-Mar",
+      "dd": "3/31/19",
+      "et": "",
+      "completed": false
+   },
+   "assignment16": {
+      "action": "Carmen: Controversial Artworks",
+      "project": "Julie Dentzer",
+      "assigned date": "26-Mar",
+      "dd": "3/26/19",
+      "et": "",
+      "completed": false
+   },
+   "assignment95": {
+      "action": "Advanced Rendering/Animation/Photoshopping",
+      "project": "John",
+      "assigned date": "27-Mar",
+      "dd": "4/7/19",
+      "et": "",
+      "completed": false
+   },
+   "assignment8": {
+      "action": "Reading: Rosenberg, American Action Painters",
+      "project": "Julie Dentzer",
+      "assigned date": "28-Mar",
+      "dd": "4/2/19",
+      "et": "",
+      "completed": false
+   },
+   "assignment9": {
+      "action": "Recap: Greenberg Reading",
+      "project": "Julie Dentzer",
+      "assigned date": "28-Mar",
+      "dd": "4/2/19",
+      "et": "",
+      "completed": false
+   },
+   "assignment52": {
+      "action": "VR Production",
+      "project": "Alex and Vita",
+      "assigned date": "1-Apr",
+      "dd": "4/26/19",
+      "et": "",
+      "completed": false
+   },
+   "assignment60": {
+      "action": "Exam 4: Units 8, 9, 10",
+      "project": "Dr. Campbell",
+      "assigned date": "1-Apr",
+      "dd": "4/7/19",
+      "et": "",
+      "completed": false
+   },
+   "assignment76": {
+      "action": "Quiz 11",
+      "project": "Dr. Campbell",
+      "assigned date": "1-Apr",
+      "dd": "4/7/19",
+      "et": "",
+      "completed": false
+   },
+   "assignment87": {
+      "action": "Read Unit 11: Chocolate",
+      "project": "Dr. Campbell",
+      "assigned date": "1-Apr",
+      "dd": "4/7/19",
+      "et": "",
+      "completed": false
+   },
+   "assignment55": {
+      "action": "A4: Current Events",
+      "project": "Dr. Campbell",
+      "assigned date": "8-Apr",
+      "dd": "4/14/19",
+      "et": "",
+      "completed": false
+   },
+   "assignment77": {
+      "action": "Quiz 12",
+      "project": "Dr. Campbell",
+      "assigned date": "8-Apr",
+      "dd": "4/14/19",
+      "et": "",
+      "completed": false
+   },
+   "assignment10": {
+      "action": "Reading: Byran-Wilson, Remembering Yoko Ono's cut piece",
+      "project": "Julie Dentzer",
+      "assigned date": "9-Apr",
+      "dd": "4/11/19",
+      "et": "",
+      "completed": false
+   },
+   "assignment38": {
+      "action": "Model Building and Installation",
+      "project": "Lauren",
+      "assigned date": "9-Apr",
+      "dd": "4/18/19",
+      "et": "",
+      "completed": false
+   },
+   "assignment96": {
+      "action": "Final Due",
+      "project": "John",
+      "assigned date": "10-Apr",
+      "dd": "4/14/19",
+      "et": "",
+      "completed": false
+   },
+   "assignment11": {
+      "action": "Final",
+      "project": "Julie Dentzer",
+      "assigned date": "11-Apr",
+      "dd": "4/18/18",
+      "et": "",
+      "completed": false
+   },
+   "assignment61": {
+      "action": "Exam 5: Units 11, 12",
+      "project": "Dr. Campbell",
+      "assigned date": "15-Apr",
+      "dd": "4/21/19",
+      "et": "",
+      "completed": false
+   },
+   "assignment12": {
+      "action": "Carmen: Arts & Politics",
+      "project": "Julie Dentzer",
+      "assigned date": "16-Apr",
+      "dd": "4/16/19",
+      "et": "",
+      "completed": false
+   },
+   "assignment56": {
+      "action": "A5: Anonymous End of course Survey",
+      "project": "Dr. Campbell",
+      "assigned date": "22-Apr",
+      "dd": "4/28/19",
+      "et": "",
+      "completed": false
+   },
+   "assignment62": {
+      "action": "Exam 6: Cumulative",
+      "project": "Dr. Campbell",
+      "assigned date": "22-Apr",
+      "dd": "4/28/19",
+      "et": "",
+      "completed": false
+   },
+   "assignment15": {
+      "action": "Carmen: Art in the Age of YouTube",
+      "project": "Julie Dentzer",
+      "assigned date": "23-Apr",
+      "dd": "4/23/19",
+      "et": "",
+      "completed": false
+   },
+   "assignment13": {
+      "action": "Carmen: Art on Campus",
+      "project": "Julie Dentzer",
+      "assigned date": "30-Apr",
+      "dd": "4/30/19",
+      "et": "",
+      "completed": false
+   },
+   "assignment14": {
+      "action": "Carmen: The Magnificent Medici",
+      "project": "Julie Dentzer",
+      "assigned date": "30-Apr",
+      "dd": "4/30/19",
+      "et": "",
+      "completed": false
+   }
 }
 
 var today, week, x, action, project, dueDate, dd, et, monthAsText;
