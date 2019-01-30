@@ -5,13 +5,13 @@
 }
 
 .page {
-  width: 90%;
+  width: 396pt;
   height: 612pt;
   margin: auto;
 }
 
 .content {
-  margin: 20 0 0 0;
+  margin: 36pt;
 }
 
 .header {
@@ -72,7 +72,7 @@ h4 {
 
 .list {
   float: left;
-  width: 100%;
+  width: 50%;
   /* height: 398pt; */
   padding-top: 8pt;
 }
