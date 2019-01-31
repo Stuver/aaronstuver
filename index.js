@@ -1,27 +1,13 @@
 window.onload = function() {
 
   var Airtable = require('airtable');
-var base = new Airtable({apiKey: 'keylQW7Ohrl2hcUIF'}).base('app3uhgYsJkD9JoKz');
+  var base = new Airtable({apiKey: 'keylQW7Ohrl2hcUIF'}).base('app3uhgYsJkD9JoKz');
 
-base('Actions').select({
-    // Selecting the first 3 records in Grid view:
-    maxRecords: 3,
-    view: "Grid view"
-}).eachPage(function page(records, fetchNextPage) {
-    // This function (`page`) will get called for each page of records.
-
-    records.forEach(function(record) {
-        console.log('Retrieved', record.get('key'));
-    });
-
-    // To fetch the next page of records, call `fetchNextPage`.
-    // If there are more records, `page` will get called again.
-    // If there are no more records, `done` will get called.
-    fetchNextPage();
-
-}, function done(err) {
-    if (err) { console.error(err); return; }
-});
+  base('Actions').find('recjOw5D8475xxEPX', function(err, record) {
+      if (err) { console.error(err); return; }
+      else {console.log(record);
+      console.log(record.get('action')); }
+  });
 
 var assignments = {
    "assignment29": {
