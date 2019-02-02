@@ -22,8 +22,15 @@ et = x.et;
 
 var newListItem = document.createElement("div");
 newListItem.className = "listItem";
-var checkbox = document.createElement("div");
+var checkbox = document.createElement("input");
+checkbox.type = "checkbox"
 checkbox.className = "checkbox";
+checkbox.id = data.records[i].id;
+checkbox.addEventListener(
+     'change',
+     function() { tellAirtable(this); },
+     false
+  );
 var itemDetails = document.createElement("div");
 itemDetails.className = "itemDetails";
 var estTime = document.createElement("p");
@@ -130,4 +137,20 @@ switch (today.getMonth()) {
 
 document.getElementById("headerDate").innerHTML = dayAsText + ", " + monthAsText + " " + today.getDate();
 document.getElementById("notesContent").innerHTML = "";
+
+
+}
+
+function tellAirtable(checkboxElem) {
+  var identity = checkboxElem.id;
+  var Airtable = require('airtable');
+var base = new Airtable({apiKey: 'keylQW7Ohrl2hcUIF'}).base('app3uhgYsJkD9JoKz');
+
+base('Actions').update(identity, {
+  "completed": true
+}, function(err, record) {
+    if (err) { console.error(err); return; }
+    console.log(record.get('completed'));
+});
+
 }
