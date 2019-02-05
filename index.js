@@ -6,7 +6,7 @@ $.getJSON('https://api.airtable.com/v0/app3uhgYsJkD9JoKz/Actions?api_key=keylQW7
 
   for (var i = 0; i < 40; i++) {
 today = new Date();
-today.setDate(today.getDate() - 1);
+today.setDate(today.getDate() - 2);
 today.setHours(23);
 today.setMinutes(59);
 dueItem =  new Date();
