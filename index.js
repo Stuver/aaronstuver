@@ -54,7 +54,7 @@ newListItem.appendChild(itemDetails);
 newListItem.appendChild(estTime);
 
 if (x.completed != true) {
-  if ((dueDate >= today) && (dueDate <= dueItem)) {
+  if (dueDate <= dueItem) {
 
 var div = document.getElementById("due");
 div.appendChild(newListItem);
