@@ -2,11 +2,13 @@ window.onload = function() {
 
 var today, week, x, action, project, dueDate, dd, et, monthAsText;
 
-$.getJSON('https://api.airtable.com/v0/app3uhgYsJkD9JoKz/Actions?api_key=keylQW7Ohrl2hcUIF&view=Grid%20view&limit=40&sortField=dd&sortDirection=asc', function(data) {
+var getItems = 200;
 
-  for (var i = 0; i < 40; i++) {
+$.getJSON('https://api.airtable.com/v0/app3uhgYsJkD9JoKz/Actions?api_key=keylQW7Ohrl2hcUIF&view=Grid%20view&limit=99&sortField=dd&sortDirection=asc', function(data) {
+
+  for (var i = 0; i < 99; i++) {
 today = new Date();
-today.setDate(today.getDate() - 2);
+today.setDate(today.getDate() - 1);
 today.setHours(23);
 today.setMinutes(59);
 dueItem =  new Date();
