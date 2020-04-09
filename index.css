@@ -23,18 +23,26 @@ div {
 
 }
 
+p {
+  font-family: "IBM Plex Serif Text";
+  font-size: 12pt;
+  line-height: 16pt;
+  margin-bottom: 12px;
+}
+
 h1 {
-  font-family: "IBM Plex Mono";
-  font-size: 14pt;
-  line-height: 18pt;
-  border-bottom: 1pt solid black;
-  margin-bottom: 8px;
+  font-family: "IBM Plex Serif Bold";
+  font-size: 24pt;
+  line-height: 29pt;
+  margin-bottom: 12px;
 }
 
 h2 {
-  font-family: "IBM Plex Mono Semibold";
-  font-size: 12pt;
-  line-height: 14.4pt;
+  font-family: "IBM Plex Sans Semibold";
+  font-size: 9pt;
+  text-transform: uppercase;
+  line-height: 11pt;
+  margin-bottom: 6px;
 }
 
 h3 {
