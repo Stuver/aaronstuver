@@ -144,7 +144,7 @@ h4 {
   color: black;
 }
 
-.main-story h2 {
+.main-story h2, .psalm .kappa {
   font-family: 'IBM Plex Serif', sans-serif;
   text-transform: capitalize;
   font-weight: 700;
