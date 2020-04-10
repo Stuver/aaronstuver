@@ -4,19 +4,26 @@
   margin: 0px;
 }
 
-.page {
+body {
   width: 1200px;
   margin: auto;
+  margin-top: 24px;
 }
 
 .content {
-  margin: 36px;
+  margin-left: 4px;
+  margin-right: 4px;
 }
 
 .header {
   position: relative;
-  height: 24px;
-  width: auto;
+  width: 100%;
+}
+
+.flex-container {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
 }
 
 div {
@@ -95,10 +102,40 @@ h4 {
   display: flex;
 }
 
+.feature-links {
+  justify-content: space-between;
+}
+
+.feature-link h2 {
+  font-family: 'IBM Plex Serif', serif;
+  text-transform: capitalize;
+  font-weight: 700;
+  font-size: 12pt;
+  line-height: 14.4pt;
+  margin: 0px;
+}
+
+.feature-link p {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 300;
+  font-size: 12pt;
+  line-height: 14.4pt;
+  color: gray;
+  margin: 0px;
+  orphans: 2;
+  widows: 2;
+}
+
+.feature-link b {
+  color: black;
+}
+
 #headerDate {
   font-size: 10pt;
   line-height: 24pt;
   text-align: center;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
 }
 
 #logo {
@@ -124,8 +161,19 @@ h4 {
 }
 
 @media screen and (max-width: 1200px) {
-  .page {
+  body {
     width: auto;
-    margin: 25px;
+    margin: 24px;
   }
+}
+
+@media screen and (max-width: 934px) {
+  .feature-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 324px;
+    margin: auto;
+  }
+
 }
