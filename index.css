@@ -10,6 +10,18 @@ body {
   margin-top: 24px;
 }
 
+a:link {
+    text-decoration: inherit;
+    color: inherit;
+    cursor: auto;
+}
+
+a:visited {
+    text-decoration: inherit;
+    color: inherit;
+    cursor: auto;
+}
+
 .flex-container {
   display: flex;
   flex-flow: row nowrap;
