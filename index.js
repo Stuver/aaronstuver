@@ -77,25 +77,25 @@ var dayAsText;
 
 switch (today.getDay()) {
     case 0:
-        dayAsText = "Sun";
+        dayAsText = "Sunday";
         break;
     case 1:
-        dayAsText = "Mon";
+        dayAsText = "Monday";
         break;
     case 2:
-        dayAsText = "Tues";
+        dayAsText = "Tuesday";
         break;
     case 3:
-        dayAsText = "Wed";
+        dayAsText = "Wednesday";
         break;
     case 4:
-        dayAsText = "Thurs";
+        dayAsText = "Thursday";
         break;
     case 5:
-        dayAsText = "Fri";
+        dayAsText = "Friday";
         break;
     case 6:
-        dayAsText = "Sat";
+        dayAsText = "Saturday";
 }
 
 switch (today.getMonth()) {
@@ -137,7 +137,7 @@ switch (today.getMonth()) {
     break;
 }
 
-document.getElementById("headerDate").innerHTML = dayAsText + ", " + monthAsText + " " + today.getDate();
+document.getElementById("headerDate").innerHTML = dayAsText + ", " + monthAsText + " " + today.getDate() + ", " + 2020;
 document.getElementById("notesContent").innerHTML = "";
 
 

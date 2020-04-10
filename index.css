@@ -16,7 +16,7 @@
 .header {
   position: relative;
   height: 24px;
-  width: 100%;
+  width: auto;
 }
 
 div {
@@ -24,21 +24,24 @@ div {
 }
 
 p {
-  font-family: "IBM Plex Serif Text";
+  font-family: 'IBM Plex Serif', serif;
+  font-weight: 400;
   font-size: 12pt;
   line-height: 16pt;
   margin-bottom: 12px;
 }
 
 h1 {
-  font-family: "IBM Plex Serif Bold";
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 700;
   font-size: 24pt;
   line-height: 29pt;
   margin-bottom: 12px;
 }
 
 h2 {
-  font-family: "IBM Plex Sans Semibold";
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 700;
   font-size: 9pt;
   text-transform: uppercase;
   line-height: 11pt;
@@ -46,13 +49,15 @@ h2 {
 }
 
 h3 {
-  font-family: "IBM Plex Mono Text";
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 400;
   font-size: 10pt;
   line-height: 12pt;
 }
 
 h4 {
-  font-family: "IBM Plex Mono Text";
+  font-family: "IBM Plex Mono";
+  font-style: Text;
   font-size: 8pt;
   line-height: 10pt;
 }
@@ -91,12 +96,9 @@ h4 {
 }
 
 #headerDate {
-  font-family: "IBM Plex Mono";
-  font-weight: "Bold";
   font-size: 10pt;
   line-height: 24pt;
-  position: absolute;
-  left: 0;
+  text-align: center;
 }
 
 #logo {
@@ -121,15 +123,9 @@ h4 {
   height: 130px;
 }
 
-@media print {
-
-  /* .page {
+@media screen and (max-width: 1200px) {
+  .page {
     width: auto;
-    height: auto;
-  } */
-
-  /* #Notes {
-    position: fixed;
-    bottom: 0px;
-  } */
+    margin: 25px;
+  }
 }
