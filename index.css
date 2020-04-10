@@ -10,7 +10,15 @@ body {
   margin-top: 24px;
 }
 
+.flex-container {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
 .content {
+  display: flex;
+  flex-flow: row nowrap;
   margin-left: 4px;
   margin-right: 4px;
 }
@@ -18,12 +26,6 @@ body {
 .header {
   position: relative;
   width: 100%;
-}
-
-.flex-container {
-  display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
 }
 
 div {
@@ -128,6 +130,74 @@ h4 {
 
 .feature-link b {
   color: black;
+}
+
+.main-story h2 {
+  font-family: 'IBM Plex Serif', sans-serif;
+  text-transform: capitalize;
+  font-weight: 700;
+  font-size: 24pt;
+  line-height: 30pt;
+  margin: 0px;
+  margin-bottom: 12pt;
+  orphans: 2;
+  widows: 2;
+}
+
+.sidebar h2 {
+  font-family: 'IBM Plex Serif', sans-serif;
+  text-transform: capitalize;
+  font-weight: 700;
+  font-size: 18pt;
+  line-height: 22pt;
+  margin: 0px;
+  margin-bottom: 12pt;
+  orphans: 2;
+  widows: 2;
+}
+
+.section-title h3 {
+  font-family: 'IBM Plex Mono', monospace;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 9pt;
+  line-height: 11pt;
+  letter-spacing: 0.1em;
+  margin: 0px;
+  margin-bottom: 12px;
+}
+
+.section-title h4 {
+  font-family: 'IBM Plex Mono', monospace;
+  text-transform: capitalize;
+  font-weight: 300;
+  font-style: italic;
+  font-size: 9pt;
+  line-height: 11pt;
+  margin: 0px;
+  margin-bottom: 12px;
+}
+
+.action h2 {
+  font-family: 'IBM Plex Sans', sans-serif;
+  text-transform: capitalize;
+  font-weight: 700;
+  font-size: 18pt;
+  line-height: 22pt;
+  margin: 0px;
+  orphans: 2;
+  widows: 2;
+}
+
+.action h3, h4 {
+  font-family: 'IBM Plex Mono', monospace;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 9pt;
+  line-height: 11pt;
+  letter-spacing: 0.1em;
+  margin: 0px;
+  margin-bottom: 12px;
 }
 
 #headerDate {
