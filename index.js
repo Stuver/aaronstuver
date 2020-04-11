@@ -1,4 +1,4 @@
-window.onload = function() {
+function() {
 
   today = new Date();
 

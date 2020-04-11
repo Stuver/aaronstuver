@@ -1,4 +1,4 @@
-window.onload = function() {
+function func2() {
 
   // var today, week, x, action, project, dueDate, dd, et, monthAsText;
 
@@ -52,8 +52,6 @@ window.onload = function() {
       });
     }
   });
-
-  console.log(name);
 
 }
 
