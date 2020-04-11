@@ -13,40 +13,43 @@ window.onload = function() {
       name = action.records[i].fields.name;
       course = action.records[i].fields.course;
       project = action.records[i].fields.projects;
+      id = action.records[i].id;
 
-      $.getJSON('https://api.airtable.com/v0/appqQpMi2KR6naxTC/Responsibilities?api_key=keylQW7Ohrl2hcUIF&view=Grid%20view&limit=99&sortField=name&sortDirection=asc', function(data) {
-        for (var j = 0; j < data.records.length; j++) {
-          if (course == data.records[j].id) {
-            course = data.records[j].fields.name;
-            document.getElementById("taskOneCourse").innerHTML = course;
-          }
-        }
-      });
+      var newAction = document.createElement("div");
+      newAction.className = "action";
+      newAction.id = id;
+      var newActionName = document.createElement("h2");
+      newAction.appendChild(newActionName);
+      var newActionLabel = document.createElement("div");
+      newActionLabel.className = "flex-container";
+      var newActionCourse = document.createElement("h3");
+      newActionLabel.appendChild(newActionCourse);
+      var newActionProject = document.createElement("h4");
+      newActionLabel.appendChild(newActionProject);
+      newAction.appendChild(newActionLabel);
+
+      var div = document.getElementById("actions");
+      div.appendChild(newAction);
+
+      document.getElementById(id).children[0].innerHTML = name;
+
+      // $.getJSON('https://api.airtable.com/v0/appqQpMi2KR6naxTC/Responsibilities?api_key=keylQW7Ohrl2hcUIF&view=Grid%20view&limit=99&sortField=name&sortDirection=asc', function(data) {
+      //   for (var j = 0; j < data.records.length; j++) {
+      //     if (course == data.records[j].id) {
+      //       course = data.records[j].fields.name;
+      //       document.getElementById(id).children[1].children[0].innerHTML = course;
+      //     }
+      //   }
+      // });
 
       $.getJSON('https://api.airtable.com/v0/appqQpMi2KR6naxTC/Projects?api_key=keylQW7Ohrl2hcUIF&view=By%20Responsibility&limit=99&sortField=name&sortDirection=asc', function(data) {
         for (var k = 0; k < data.records.length; k++) {
           if (project == data.records[k].id) {
             project = data.records[k].fields.name;
-            document.getElementById("taskOneProject").innerHTML = project;
+            document.getElementById(id).children[1].children[1].innerHTML = project;
           }
         }
       });
-
-      console.log(course + " " + project);
-
-      switch (i) {
-        case 0:
-        document.getElementById("taskOneName").innerHTML = name;
-
-
-        break;
-
-        case 1:
-        document.getElementById("taskTwoName").innerHTML = name;
-        document.getElementById("taskTwoCourse").innerHTML = course;
-        document.getElementById("taskTwoProject").innerHTML = project;
-        break;
-      }
     }
   });
 
