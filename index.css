@@ -171,6 +171,12 @@ h4 {
   margin-right: 24px;
 }
 
+.main-story {
+  padding-left: 32pt;
+  margin-top: 8pt;
+  margin-bottom: 8pt;
+}
+
 .main-story h2, .psalm .kappa, .reading .kappa {
   font-family: 'IBM Plex Serif', sans-serif;
   text-transform: capitalize;
