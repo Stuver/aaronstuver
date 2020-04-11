@@ -1,4 +1,4 @@
-function func2() {
+function func1() {
 
   // var today, week, x, action, project, dueDate, dd, et, monthAsText;
 
@@ -50,6 +50,7 @@ function func2() {
           }
         }
       });
+      
     }
   });
 

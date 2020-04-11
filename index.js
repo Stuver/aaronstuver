@@ -1,4 +1,4 @@
-function() {
+function func3() {
 
   today = new Date();
 
