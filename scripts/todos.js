@@ -2,34 +2,59 @@ window.onload = function() {
 
   // var today, week, x, action, project, dueDate, dd, et, monthAsText;
 
+  var card, name, course, project = ""
+
   var getItems = 200;
 
-  $.getJSON('https://api.airtable.com/v0/appqQpMi2KR6naxTC/Actions?api_key=keylQW7Ohrl2hcUIF&view=Due%20This%20Week&limit=99&sortField=Due%20Date&sortDirection=asc', function(data) {
+  $.getJSON('https://api.airtable.com/v0/appqQpMi2KR6naxTC/Actions?api_key=keylQW7Ohrl2hcUIF&view=Due%20This%20Week&limit=99&sortField=dueDate&sortDirection=asc', function(action) {
 
-    for (var i = 0; i < 99; i++) {
-      card = data.records[i].fields;
-      name = card.name;
-      course = card.course;
-      project = card.projects;
+    for (var i = 0; i < action.records.length; i++) {
+      card = action.records[i].fields;
+      name = action.records[i].fields.name;
+      course = action.records[i].fields.course;
+      project = action.records[i].fields.projects;
 
-      console.log(name);
+      $.getJSON('https://api.airtable.com/v0/appqQpMi2KR6naxTC/Responsibilities?api_key=keylQW7Ohrl2hcUIF&view=Grid%20view&limit=99&sortField=name&sortDirection=asc', function(data) {
+        for (var j = 0; j < data.records.length; j++) {
+          if (course == data.records[j].id) {
+            course = data.records[j].fields.name;
+            document.getElementById("taskOneCourse").innerHTML = course;
+          }
+        }
+      });
+
+      $.getJSON('https://api.airtable.com/v0/appqQpMi2KR6naxTC/Projects?api_key=keylQW7Ohrl2hcUIF&view=By%20Responsibility&limit=99&sortField=name&sortDirection=asc', function(data) {
+        for (var k = 0; k < data.records.length; k++) {
+          if (project == data.records[k].id) {
+            project = data.records[k].fields.name;
+            document.getElementById("taskOneProject").innerHTML = project;
+          }
+        }
+      });
+
+      console.log(course + " " + project);
 
       switch (i) {
         case 0:
         document.getElementById("taskOneName").innerHTML = name;
-        document.getElementById("taskOneCourse").innerHTML = course;
-        document.getElementById("taskOneProject").innerHTML = projects;
+
+
         break;
 
         case 1:
         document.getElementById("taskTwoName").innerHTML = name;
         document.getElementById("taskTwoCourse").innerHTML = course;
-        document.getElementById("taskTwoProject").innerHTML = projects;
+        document.getElementById("taskTwoProject").innerHTML = project;
         break;
       }
     }
   });
-  }
+
+  console.log(name);
+
+}
+
+
 
 
 //

@@ -190,6 +190,11 @@ h4 {
   margin-bottom: 12px;
 }
 
+.action {
+  margin-bottom: 12px;
+  border-bottom: 1px solid gray;
+}
+
 .action h2 {
   font-family: 'IBM Plex Sans', sans-serif;
   text-transform: capitalize;
