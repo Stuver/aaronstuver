@@ -14,16 +14,22 @@ content = BeautifulSoup(response.content, "html.parser")
 # for tweet in content.find('p', attrs={"class": "content"}):
 #     print (tweet.text.encode('utf-8'))
 
-f = open("scriptureData.json", "w")
-f.close()
-
 readingArr = []
 
-
+for reading in content.findAll('div', attrs={"class": "psalm"}):
+    title = reading.find('p', attrs={"class": "kappa"}).text
+    titlearr = title.split()
+    title = titlearr[1] + "-" + titlearr[0]
+    filename = ''.join(title) + ".html"
+    filename = ''.join(filename)
+    print(filename)
+    print(reading, file=open(filename, "w"))
 
 for reading in content.findAll('div', attrs={"class": "reading"}):
-    title = reading.find('p', attrs={"class": "kappa"}).text,
-    filename = ''.join(title) + ".html",
+    title = reading.find('p', attrs={"class": "kappa"}).text
+    titlearr = title.split()
+    title = titlearr[1] + "-" + titlearr[0]
+    filename = ''.join(title) + ".html"
     filename = ''.join(filename)
     print(filename)
     print(reading, file=open(filename, "w"))
