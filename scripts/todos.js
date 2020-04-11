@@ -17,6 +17,9 @@ function func1() {
 
       var newAction = document.createElement("div");
       newAction.className = "action";
+      if (i == 0) {
+        newAction.className = "action first";
+      }
       newAction.id = id;
       var newActionName = document.createElement("h2");
       newAction.appendChild(newActionName);
@@ -42,14 +45,14 @@ function func1() {
       //   }
       // });
 
-      $.getJSON('https://api.airtable.com/v0/appqQpMi2KR6naxTC/Projects?api_key=keylQW7Ohrl2hcUIF&view=By%20Responsibility&limit=99&sortField=name&sortDirection=asc', function(data) {
-        for (var k = 0; k < data.records.length; k++) {
-          if (project == data.records[k].id) {
-            project = data.records[k].fields.name;
-            document.getElementById(id).children[1].children[1].innerHTML = project;
-          }
-        }
-      });
+      // $.getJSON('https://api.airtable.com/v0/appqQpMi2KR6naxTC/Projects?api_key=keylQW7Ohrl2hcUIF&view=By%20Responsibility&limit=99&sortField=name&sortDirection=asc', function(data) {
+      //   for (var k = 0; k < data.records.length; k++) {
+      //     if (project == data.records[k].id) {
+      //       project = data.records[k].fields.name;
+      //       document.getElementById(id).children[1].children[1].innerHTML = project;
+      //     }
+      //   }
+      // });
     }
   });
 
@@ -63,6 +66,9 @@ function func1() {
 
       var newAction = document.createElement("div");
       newAction.className = "action";
+      if (i == data.records.length - 1) {
+        newAction.className = "action last"
+      }
       newAction.id = id;
       var newActionName = document.createElement("h2");
       newAction.appendChild(newActionName);
@@ -79,14 +85,14 @@ function func1() {
 
       document.getElementById(id).children[0].innerHTML = name;
 
-      $.getJSON('https://api.airtable.com/v0/appqQpMi2KR6naxTC/Responsibilities?api_key=keylQW7Ohrl2hcUIF&view=Grid%20view&limit=99&sortField=name&sortDirection=asc', function(data) {
-        for (var j = 0; j < data.records.length; j++) {
-          if (course == data.records[j].id) {
-            course = data.records[j].fields.name;
-            document.getElementById(id).children[1].children[0].innerHTML = course;
-          }
-        }
-      });
+      // $.getJSON('https://api.airtable.com/v0/appqQpMi2KR6naxTC/Responsibilities?api_key=keylQW7Ohrl2hcUIF&view=Grid%20view&limit=99&sortField=name&sortDirection=asc', function(data) {
+      //   for (var j = 0; j < data.records.length; j++) {
+      //     if (course == data.records[j].id) {
+      //       course = data.records[j].fields.name;
+      //       document.getElementById(id).children[1].children[0].innerHTML = course;
+      //     }
+      //   }
+      // });
 
       // $.getJSON('https://api.airtable.com/v0/appqQpMi2KR6naxTC/Projects?api_key=keylQW7Ohrl2hcUIF&view=By%20Responsibility&limit=99&sortField=name&sortDirection=asc', function(data) {
       //   for (var k = 0; k < data.records.length; k++) {
