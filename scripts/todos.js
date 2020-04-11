@@ -19,6 +19,8 @@ function func1() {
       newAction.className = "action";
       if (i == 0) {
         newAction.className = "action first";
+      } else if (i == action.records.length - 1) {
+        newAction.className = "action last";
       }
       newAction.id = id;
       var newActionName = document.createElement("h2");
@@ -65,9 +67,11 @@ function func1() {
       id = data.records[i].id;
 
       var newAction = document.createElement("div");
-      newAction.className = "action";
-      if (i == data.records.length - 1) {
-        newAction.className = "action last"
+      newAction.className = "project";
+      if (i == 0) {
+        newAction.className = "project first";
+      } else if (i == data.records.length - 1) {
+        newAction.className = "project last";
       }
       newAction.id = id;
       var newActionName = document.createElement("h2");
@@ -80,7 +84,7 @@ function func1() {
       newActionLabel.appendChild(newActionProject);
       newAction.appendChild(newActionLabel);
 
-      var div = document.getElementById("actions");
+      var div = document.getElementById("projects");
       div.appendChild(newAction);
 
       document.getElementById(id).children[0].innerHTML = name;
