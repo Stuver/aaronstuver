@@ -31,8 +31,8 @@ a:visited {
 .content {
   display: flex;
   flex-flow: row nowrap;
-  margin-left: 4px;
-  margin-right: 4px;
+  margin-left: 12px;
+  margin-right: 12px;
   margin-top: 16px;
   margin-bottom: 16px;
   border-bottom: 1px solid black;
@@ -311,6 +311,10 @@ h4 {
     display: none;
   }
 
+  .feature-link {
+    max-width: 35%;
+  }
+
   #tonightsWeather, #tonightsWeatherName {
     display: none;
   }
@@ -326,6 +330,7 @@ h4 {
     margin: auto;
   }
   .feature-link {
+    max-width: none;
     border: none;
     border-bottom: 1px solid gray;
     margin: 0px;
