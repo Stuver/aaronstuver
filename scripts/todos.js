@@ -83,6 +83,7 @@ function func1() {
       name = data.records[i].fields.name;
       course = data.records[i].fields.course;
       id = data.records[i].id;
+      link = data.records[i].fields.link;
 
       var newAction = document.createElement("div");
       newAction.className = "project";
@@ -93,19 +94,35 @@ function func1() {
       }
       newAction.id = id;
       var newActionName = document.createElement("h2");
-      newAction.appendChild(newActionName);
       var newActionLabel = document.createElement("div");
       newActionLabel.className = "flex-container";
       var newActionCourse = document.createElement("h3");
       newActionLabel.appendChild(newActionCourse);
       var newActionProject = document.createElement("h4");
       newActionLabel.appendChild(newActionProject);
-      newAction.appendChild(newActionLabel);
+
+      if ( link ) {
+        var newActionLink1 = document.createElement("a");
+        var newActionLink2 = document.createElement("a");
+        newActionLink1.href = link;
+        newActionLink2.href = link;
+        newActionLink1.appendChild(newActionName);
+        newActionLink2.appendChild(newActionLabel);
+        newAction.appendChild(newActionLink1);
+        newAction.appendChild(newActionLink2);
+      } else {
+        newAction.appendChild(newActionName);
+        newAction.appendChild(newActionLabel);
+      }
 
       var div = document.getElementById("projects");
       div.appendChild(newAction);
 
-      document.getElementById(id).children[0].innerHTML = name;
+      if ( link ) {
+        document.getElementById(id).children[0].children[0].innerHTML = name;
+      } else {
+        document.getElementById(id).children[0].innerHTML = name;
+      }
 
       // $.getJSON('https://api.airtable.com/v0/appqQpMi2KR6naxTC/Responsibilities?api_key=keylQW7Ohrl2hcUIF&view=Grid%20view&limit=99&sortField=name&sortDirection=asc', function(data) {
       //   for (var j = 0; j < data.records.length; j++) {
