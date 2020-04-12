@@ -304,7 +304,6 @@ h4 {
 @media screen and (max-width: 1200px) {
   body {
     width: auto;
-    margin: 24px;
   }
 
   .feature-links img {
