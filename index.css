@@ -135,12 +135,12 @@ h4 {
 }
 
 .feature-links .first {
-  padding-left: 0px;
+  padding-left: 8px;
   border-left: 0px;
 }
 
 .feature-links .last {
-  padding-right: 0px;
+  padding-right: 8px;
 }
 
 .feature-link h2 {
