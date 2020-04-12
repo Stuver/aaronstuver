@@ -2,7 +2,7 @@ from bs4 import BeautifulSoup
 import requests
 import json
 
-url = 'https://www.presbyterianmission.org/devotion/daily/2020/4/10/'
+url = 'https://www.presbyterianmission.org/devotion/daily/2020/4/11/'
 response = requests.get(url, timeout=5)
 content = BeautifulSoup(response.content, "html.parser")
 
@@ -23,7 +23,7 @@ for reading in content.findAll('div', attrs={"class": "psalm"}):
     filename = ''.join(title) + ".html"
     filename = ''.join(filename)
     print(filename)
-    print(reading, file=open(filename, "w"))
+    # print(reading, file=open(filename, "w"))
 
 for reading in content.findAll('div', attrs={"class": "reading"}):
     title = reading.find('p', attrs={"class": "kappa"}).text
@@ -32,7 +32,7 @@ for reading in content.findAll('div', attrs={"class": "reading"}):
     filename = ''.join(title) + ".html"
     filename = ''.join(filename)
     print(filename)
-    print(reading, file=open(filename, "w"))
+    # print(reading, file=open(filename, "w"))
     readingObject = {
     # "time": reading.find('a'),
     # "passage": reading.find('p', attrs={"class": "kappa"}).encode('utf-8'),
