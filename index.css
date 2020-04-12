@@ -124,12 +124,14 @@ h4 {
 }
 
 .feature-link {
-  height: 80px;
+  min-height: 80px;
   margin-top: 8px;
   margin-bottom: 8px;
   padding-left: 24px;
   padding-right: 24px;
   border-left: 1px solid gray;
+  overflow: hidden;
+  max-width: 45%;
 }
 
 .feature-links .first {
@@ -172,6 +174,7 @@ h4 {
 }
 
 .main-story {
+  min-width: 60%;
   padding-left: 32pt;
   margin-top: 8pt;
   margin-bottom: 8pt;
@@ -198,7 +201,7 @@ h4 {
   margin-bottom: 12pt;
 }
 
-.sidebar h2 {
+.sidebar h2, .sidebar a {
   font-family: 'IBM Plex Serif', sans-serif;
   text-transform: capitalize;
   font-weight: 700;
@@ -315,6 +318,7 @@ h4 {
 
 @media screen and (max-width: 750px) {
   .feature-links {
+    max-width: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
