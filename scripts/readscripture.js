@@ -37,6 +37,10 @@ switch (today.getHours()) {
     case 21:
     case 22:
     case 23:
+    case 0:
+    case 1:
+    case 2:
+    case 3:
       $(function(){
         $("#includedContent").load("webscraper/Psalm-Evening.html");
       });
