@@ -1,8 +1,13 @@
 from bs4 import BeautifulSoup
 import requests
 import json
+import datetime
 
-url = 'https://www.presbyterianmission.org/devotion/daily/2020/4/12/'
+date = datetime.datetime.now()
+datestr = date.strftime("%Y") + "/" + date.strftime("%m") + "/" + date.strftime("%d") + "/"
+print(datestr)
+
+url = 'https://www.presbyterianmission.org/devotion/daily/' + datestr
 response = requests.get(url, timeout=5)
 content = BeautifulSoup(response.content, "html.parser")
 
@@ -33,12 +38,15 @@ for reading in content.findAll('div', attrs={"class": "reading"}):
     filename = ''.join(filename)
     print(filename)
     print(reading, file=open(filename, "w"))
-    readingObject = {
-    # "time": reading.find('a'),
-    # "passage": reading.find('p', attrs={"class": "kappa"}).encode('utf-8'),
-    # "text": reading.find('div').encode('utf-8')
-    # reading.find('div', attrs={"class": "reading"})
-    }
+
+
+
+    # readingObject = {
+    # # "time": reading.find('a'),
+    # # "passage": reading.find('p', attrs={"class": "kappa"}).encode('utf-8'),
+    # # "text": reading.find('div').encode('utf-8')
+    # # reading.find('div', attrs={"class": "reading"})
+    # }
     # passagetime = reading.find('a').encode('utf-8'),
     # ''.join(passagetime),
     # passagetime = passagetime.replace("<a name=\"", '', 1),
